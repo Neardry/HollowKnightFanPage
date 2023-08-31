@@ -1,0 +1,94 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+}
+
+header img {
+    height: 90px;
+    margin: 5px;
+}
+header nav li {
+    display: inline;
+    margin-right: 15px;
+}
+header nav li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    border-right: 1px solid black;
+    border-left:1px solid black;
+    padding: 5px 20px;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    
+}
+
+
+.banner {
+    background-image: url('https://images.nintendolife.com/8108a1bdd0157/hollow-knight.large.jpg');
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 50px purple;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.banner div h1 {
+    color: #ffffff;
+    font-size: 50px;    
+    font-family: 'Play', sans-serif;
+    margin-right: 40px;
+}
+
+.container {
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section h2 {
+    margin: 40px 0px 20px 0px;
+    font-size: 30px;
+}
+section p {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.trailer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+    margin-top: 50px;
+}
+.trailer div h4 {
+    font-size: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    background-color: rgba(255, 228, 196, 0.616);
+}
+footer p {
+    font-size: 20px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a:hover {
+    background-color: rgb(249, 240, 255);
+    box-shadow: 2px 10px 30px rgb(151, 115, 168);
+}

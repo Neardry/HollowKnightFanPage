@@ -92,3 +92,35 @@ a:hover {
     background-color: rgb(249, 240, 255);
     box-shadow: 2px 10px 30px rgb(151, 115, 168);
 }
+
+label img {
+    height: 20px;
+    padding-bottom: -2px;
+}
+.Formulario {
+    margin: 0px auto;
+    width: 70%;
+    border: 1px solid rgba(124, 124, 124, 0.582);
+    border-radius: 5px;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+textarea {
+    resize: none;
+    height: 100px;
+    width: 400px;
+}
+.Formulario h4 {
+    font-size: 22px;
+    color: rgb(143, 143, 143);
+}
+.input-text {
+    margin-right: 15px;
+}
+input {
+    margin-right: 6px;
+}

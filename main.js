@@ -36,11 +36,11 @@ nomeCliente.addEventListener('keyup', function(e) {   //o "e" do function repres
 
     if (!formularioEhValido) {
         nomeCliente.classList.add('error'); //error é uma classe diferenciada, de uma olhada no CSS
-        nomeCliente.style.border = '1px solid red'; //deixei ele aqui pois quando não tem nada escrito e o input é tirado de foco, ele tira a borda (OBS: São dois jeitos de fazer essa estilização, com essa linha e com a outra que está em comentário no else. Porém com o add é melhor.)
+        nomeCliente.style.border = '1px solid red'; //deixei ele aqui pois quando não tem nada escrito e o input é tirado de foco, ele tira a borda (OBS: São dois jeitos de fazer essa estilização, com essa linha e com a outra que está no else. Porém com o add é melhor.)
         document.querySelector('.message-error').style.display = 'block';
     } else {
         nomeCliente.classList.remove('error');
-       // nomeCliente.style = '';
+        nomeCliente.style = '';
         document.querySelector('.message-error').style.display = 'none';
     }
 });

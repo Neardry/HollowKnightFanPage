@@ -106,11 +106,15 @@ label img {
     border: 1px solid rgba(124, 124, 124, 0.582);
     border-radius: 5px;
     text-align: center;
-    height: 200px;
+    height: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+input {
+    padding: 5px;
+    margin: 10px;
 }
 textarea {
     resize: none;
@@ -121,9 +125,21 @@ textarea {
     font-size: 22px;
     color: rgb(143, 143, 143);
 }
-.input-text {
-    margin-right: 15px;
+.success-message {
+    padding: 10px;
+    background-color: rgb(72, 130, 236);
+    color: #fff;
+    display: none;
+    border-radius: 5px;
 }
-input {
-    margin-right: 6px;
+.message-error {
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+input.error {
+    border: red;
+    color: red;
+    outline-color: red;
 }

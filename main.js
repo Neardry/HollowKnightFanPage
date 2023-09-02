@@ -3,8 +3,8 @@ const nomeCliente = document.getElementById('nomeCliente');
 let formularioEhValido = false;
 
 function validaNome(nomeCompleto) {
-   const nomeComoArray = nomeCompleto.split(' ');
-   return nomeComoArray.length >= 2; //tranforma o nome em um array retornando true se o array for maior ou igual a 2
+    const nomeComoArray = nomeCompleto.split(' ');
+  return nomeComoArray.length >= 2; //tranforma o nome em um array retornando true se o array for maior ou igual a 2
 }
 
 formulario.addEventListener('submit', function(e) {

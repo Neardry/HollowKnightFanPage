@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hollow Knight || FanPage</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="dist/styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Bungee&family=IBM+Plex+Sans+Arabic:wght@500&family=Mukta&family=Play:wght@400;700&family=Playfair:opsz,wght@5..1200,300&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
         <img src="https://www.pngmart.com/files/22/Hollow-Knight-Logo-PNG.png" alt="Logo Do Game" />
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a id="scroll-link" href="#sobre">Sobre</a></li>
                 <li><a href="https://store.steampowered.com/app/367520/Hollow_Knight/">Compre o game</a></li>
             </ul>
         </nav>
@@ -31,7 +31,7 @@
         <div class="container">
             <section id="sobre">
                     <h2>Uma sinopse rápida sobre oque o game se trata</h2>
-                    <p>Hollow Knight é uma aventura de ação clássica em estilo 2D por um vasto mundo interligado. Desenvolvido pela Team Cherry e inicialmente lançado para Microsoft Windows em 24 de Fevereiro de 2017, e posteriormente macOS e Linux. Foi portado em 2018 para o Nintendo Switch, Xbox One e Playstation 4 pela Shark Jump Studios.</p>
+                    <p>Hollow Knight é uma aventura de ação clássica em estilo 2D por um vasto mundo interligado. Desenvolvido pela Team Cherry e inicialmente lançado para Microsoft Windows em 24 de Fevereiro de 2017, e posteriormente macOS e Linux. Foi portado em 2018 para o Nintendo Switch, Xbox One e Playstation 4. Essa foi a sinopse, achou pouco? Então jogue e descubra mais sobre este incrivel universo!</p>
                     <div class="trailer">
                         <div>
                             <h4>Trailer demonstrativo do game</h4>
@@ -43,7 +43,7 @@
                     </div>
             </section>
         </div>
-        <div class="Formulario">
+        <div class="formulario">
             <h4>Já zerou o game?<span>O que achou? nos diga!</span></h4>
             <form id="form-teste">
                 <label><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/841c21f2-bacb-4101-9c4e-71b612b64710/de9l68x-f9aa7aa7-99d7-4ec7-afc5-1f20597a5e20.png/v1/fill/w_1280,h_1280/ssbu_hollow_knight_stock_icon_by_sonilan_de9l68x-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzg0MWMyMWYyLWJhY2ItNDEwMS05YzRlLTcxYjYxMmI2NDcxMFwvZGU5bDY4eC1mOWFhN2FhNy05OWQ3LTRlYzctYWZjNS0xZjIwNTk3YTVlMjAucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.PxpjrHus7YVKjeiTgbPioVVoQsLMRQnitnfm5_M-91A" alt="Knight" /></label><input id="nomeCliente" type="text" placeholder="Digite seu nome completo" required class="input-text"/> <br /> 
@@ -52,12 +52,12 @@
                 <textarea id="mensagemCliente" placeholder="Insira aqui sua opinião" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
-            <p class="success-message"></p>
+            <p class="message-success"></p>
         </div>
     </main>
     <footer>
         <p>Livre de direitos autorais 🎃 ||  2023</p>
     </footer>
-    <script src="main.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 </html>

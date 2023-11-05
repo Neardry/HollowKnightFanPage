@@ -21,7 +21,7 @@ function comprimeImage() {
 
 
 exports.watch = function() {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(compilaSass, comprimeJs))
+    gulp.watch('./src/styles/*.scss', './src/js/main.js', gulp.parallel(compilaSass, comprimeJs))
 };
 
 exports.default = gulp.parallel(compilaSass, comprimeJs, comprimeImage);

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    const botaoSobreEmpresa = document.getElementById('empresa');
     const formulario = document.getElementById('form-teste')
     const nomeCliente = document.getElementById('nomeCliente');
     let formularioEhValido = false;
@@ -61,4 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
             block: 'start'
         })
     });
+
+        botaoSobreEmpresa.addEventListener('click', function(e) {
+            e.preventDefault();
+            let divEmpresa = document.querySelector('.empresa')
+            divEmpresa.classList.toggle('empresa--is-open')
+            })
 });

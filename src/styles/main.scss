@@ -219,14 +219,17 @@ input.error {
     width: 0;
 
     &__texto {
-        font-size: 16px;
-        width: 250px;
+        width: 0px;
+        font-size: 0px;
+        color: #fff;
+        
     }
-
+    
     &__imagem {
         max-width: 50%;
+        width: 0%;
     }
-
+    
     &--is-open {
         transition: height, 1.5s ease;
         border-radius: 40px;
@@ -237,7 +240,19 @@ input.error {
         padding: 0 50px;
         max-width: 600px;
         max-height: 300px;
-        width: auto;
+        width: 60%;
+        
+        img {
+            width: 50%;
+            transition-delay: 1s;
+            transition: ease 1s;
+        }
+        p { 
+            width: 250px;
+            transition: ease 1s;
+            transition-delay: 1s;
+            font-size: 16px;
+        }
     }
 }
     

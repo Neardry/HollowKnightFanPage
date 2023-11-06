@@ -25,3 +25,4 @@ exports.watch = function() {
 };
 
 exports.default = gulp.parallel(compilaSass, comprimeJs, comprimeImage);
+

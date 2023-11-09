@@ -213,34 +213,35 @@ input.error {
 
 .empresa {
     @include flex(space-around);
+    width: 0px;
     height: 0px;
     overflow: hidden;
-    transition: height, 1.5s ease;
-    width: 0;
+    transition: height, 2s ease;
 
     &__texto {
         width: 0px;
         font-size: 0px;
         color: #fff;
-        
+        transition: 1s ease;
     }
     
     &__imagem {
         max-width: 50%;
         width: 0%;
+        transition: 1s ease;
     }
     
     &--is-open {
+        max-height: 500px;
+        max-width: 600px;
+        width: 60%;
+        height: 300px;
         transition: height, 1.5s ease;
+        overflow: visible;
+        padding: 0 50px;
         border-radius: 40px;
         color: #fff;
         background-color: lighten(#d41434, 30%);
-        height: 300px;
-        overflow: visible;
-        padding: 0 50px;
-        max-width: 600px;
-        max-height: 300px;
-        width: 60%;
         
         img {
             width: 50%;
@@ -278,11 +279,26 @@ input.error {
     }
 
     header {
-        nav li a {
-            font-size: 15px;
-        }
+        flex-direction: column;
+        nav {
+            margin-bottom: 50px;
+
+            li {
+            a {
+                font-size: 15px;
+            }
+
+            &:first-child {
+                margin-left: 60px;
+            }
+
+            &:last-child {
+                margin-left: 40px;
+            }
+        } 
+    } 
         img {
-            height: 94px;
+            height: 124px;
         }
     }
     
@@ -315,22 +331,37 @@ input.error {
     width: 406px;
 }
 
+.texto_sinopse {
+    font-size: 16px;
+    width: 300px;
+}
+
 .empresa {
     flex-direction: column;
+    justify-content: center;
 
     &__texto {
-        font-size: 12px;
-        max-width: 200px
+        max-width: 200px;
+        margin-top: 20px;
+        font-weight: normal;
+        font-style: normal;
     }
-
+    
     &--is-open {
-        height: 300px
+        height: 500px;
+        padding: 0px;
+        
+        p {
+            transition: 2s ease;
+            font-size: 16px;
+        }
     }
 }
 
 .formulario {
 
     height: 500px;
+    width: 100%;
     input {
         width: 80%;
     }
@@ -345,4 +376,36 @@ input.error {
     @include flex;
     flex-direction: column;
 }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .trailer {
+        max-width: 400px;
+
+        h4 {
+            margin-right: 20px;
+        }
+        iframe {
+            width: 450px;
+        }
+    }
+
+    .formulario {
+
+        max-height: 500px;
+        height: 450px;
+
+        button {
+            margin-bottom: 30px;
+        }
+        input {
+            width: 70%;
+        }
+    }
+
+    .empresa {
+        &--is-open {        
+            width: 80%;   
+        }
+    }
 }

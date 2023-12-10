@@ -1,0 +1,411 @@
+@use 'variaveis';
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+}
+
+@mixin flex($justifyCenter: center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justifyCenter;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 182px;
+
+    img {
+        height:150px;
+        padding: 30px;
+    }
+
+    nav li {
+        display: inline;
+        margin-right: 16px;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Mukta', sans-serif;
+            font-size: 20px;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            padding: 5px 20px;
+            
+
+            &:hover {
+                background-color: variaveis.$corFundoBotao;
+                box-shadow: variaveis.$sombraBotao;
+                transition: box-shadow ease 1s;
+            }
+        }
+    }
+}
+
+.container {
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
+    @include flex;
+}
+
+.banner {
+    background-image: url('../../dist/img/banner.jpeg');
+    height: 76vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 50px purple;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    div h1 {
+        color: #ffffff;
+        font-size: 50px;    
+        font-family: 'Play', sans-serif;
+        margin-right: 40px;
+    }
+}
+
+section {
+    h2 {
+        margin: 40px 0 20px 0;
+        font-size: 30px;
+    }
+    p {
+        margin: 0 auto;
+        width: 700px;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+    }
+}
+
+.trailer {
+    @include flex(space-between);
+    width: 1100px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    background-color: variaveis.$corFundoFooter;
+
+    p {
+        font-size: 20px;
+        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+    }
+}
+
+label img {
+    height: 20px;
+    padding-bottom: -2px;
+}
+
+.formulario {
+    margin: 50px auto;
+    width: 70%;
+    border: variaveis.$bordaFormulario;
+    border-radius: 5px;
+    text-align: center;
+    height: 380px;
+    @include flex;
+    flex-direction: column;
+    background-color: #a5b1c2;
+
+    form {
+        height: 70%;
+        width: 80%;
+    }
+
+    input {
+        width: 30%;
+        height: 15%;
+        font-size: 18px;
+    }
+
+    textarea {
+        width: 80%;
+        resize: none;
+        height: 40%;
+        margin: 30px 0;
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 14px;
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #a55eea;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: box-shadow ease 1s;
+    margin-left: 20px;  
+    
+    &:hover {
+        background-color: #b266fd;
+        box-shadow: -3px -2px 20px 0px rgba(178,102,253,1);
+        -webkit-box-shadow: -3px -2px 20px 0px rgba(178,102,253,1);
+        -moz-box-shadow: -3px -2px 20px 0px rgba(178,102,253,1);
+        transition: box-shadow ease 1s;
+        padding: 12px 22px;
+    }
+    
+        &__empresa {
+            background-color: #d81434;
+            border: 2px solid #fff;
+
+            &:hover {
+                background-color: lighten(#d81434, 5%);
+                box-shadow: -3px -2px 20px 0px lighten(#d81434, 50%);
+                padding: 10px 20px;
+            }
+        }
+}
+
+.message {
+    @include flex;
+    padding: 5px;
+
+
+    &-success {
+        padding: 10px;
+        background-color: rgb(72, 130, 236);
+        color: #fff;
+        display: none;
+        border-radius: 5px;
+        max-width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-error {
+        background-color: red;
+        color: #fff;
+        border-radius: 5px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%;
+        padding: 2px 5px;
+    }
+}
+
+input.error {
+    border: red;
+    color: red;
+    outline-color: red;
+}
+
+.empresa {
+    @include flex(space-around);
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: height, 2s ease;
+
+    &__texto {
+        width: 0px;
+        font-size: 0px;
+        color: #fff;
+        transition: 1s ease;
+    }
+    
+    &__imagem {
+        max-width: 50%;
+        width: 0%;
+        transition: 1s ease;
+    }
+    
+    &--is-open {
+        max-height: 500px;
+        max-width: 600px;
+        width: 60%;
+        height: 300px;
+        transition: height, 1.5s ease;
+        overflow: visible;
+        padding: 0 50px;
+        border-radius: 40px;
+        color: #fff;
+        background-color: lighten(#d41434, 30%);
+        
+        img {
+            width: 50%;
+            transition-delay: 1s;
+            transition: ease 1s;
+        }
+        p { 
+            width: 250px;
+            transition: ease 1s;
+            transition-delay: 1s;
+            font-size: 16px;
+        }
+    }
+}
+    
+
+
+.TeamCherry {
+    margin: 100px 0;
+    background-color: #d41434;
+    @include flex;
+    flex-direction: column;
+    padding: 50px 0;
+
+    button {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 520px) {
+    .banner div h1 {
+        font-size: 30px;
+        -webkit-text-stroke: 1px black;
+    }
+
+    header {
+        flex-direction: column;
+        nav {
+            margin-bottom: 50px;
+
+            li {
+            a {
+                font-size: 15px;
+            }
+
+            &:first-child {
+                margin-left: 60px;
+            }
+
+            &:last-child {
+                margin-left: 40px;
+            }
+        } 
+    } 
+        img {
+            height: 124px;
+        }
+    }
+    
+    section {
+        p {
+            width: 400px;
+        }
+
+        h2 {
+            width: 300px;
+        }
+    }
+    
+    iframe {
+        height: 200px;
+        width: 280px;
+    }
+    
+    .trailer {
+        width: 200px;
+        flex-direction: column;
+        @include flex;
+        
+        div h4 {
+            font-size: 20px;
+        }
+    }
+    
+    .formulario {
+    width: 406px;
+}
+
+.texto_sinopse {
+    font-size: 16px;
+    width: 300px;
+}
+
+.empresa {
+    flex-direction: column;
+    justify-content: center;
+
+    &__texto {
+        max-width: 200px;
+        margin-top: 20px;
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    &--is-open {
+        height: 500px;
+        padding: 0px;
+        
+        p {
+            transition: 2s ease;
+            font-size: 16px;
+        }
+    }
+}
+
+.formulario {
+
+    height: 500px;
+    width: 100%;
+    input {
+        width: 80%;
+    }
+} 
+
+.btn {
+    margin: 20px 0
+}
+
+
+#sobre {
+    @include flex;
+    flex-direction: column;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .trailer {
+        max-width: 400px;
+
+        h4 {
+            margin-right: 20px;
+        }
+        iframe {
+            width: 450px;
+        }
+    }
+
+    .formulario {
+
+        max-height: 500px;
+        height: 450px;
+
+        button {
+            margin-bottom: 30px;
+        }
+        input {
+            width: 70%;
+        }
+    }
+
+    .empresa {
+        &--is-open {        
+            width: 80%;   
+        }
+    }
+}

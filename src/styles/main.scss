@@ -1,10 +1,16 @@
 @use 'variaveis';
+@use 'personagens';
 
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Playfair', serif;
+    color: #fff;
+}
+
+body {
+    background-color: variaveis.$corFundoPrincipal;
 }
 
 @mixin flex($justifyCenter: center) {
@@ -52,6 +58,7 @@ header {
     width: 80%;
     text-align: center;
     @include flex;
+    max-width: 980px;
 }
 
 .banner {
